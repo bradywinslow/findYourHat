@@ -1,0 +1,18 @@
+.HeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9.5rem;
+    gap: 1rem;
+    color: #383838;
+    background-color: #59EE29;
+}
+
+.HeaderTitle {
+    font-size: 3rem;
+}
+
+.HeaderHat {
+    height: 3rem;
+    color: #67221B;
+}
