@@ -1,0 +1,20 @@
+.moveUpButtonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.moveSidewaysButtonDiv {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.moveDownButtonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.faArrowUp, .faArrowLeft, .faArrowRight, .faArrowDown {
+    margin-left: 0.5rem;
+}

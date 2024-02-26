@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Hat = () => {
-    
+export default function Hat() {
     const hat = '^';
+
+    /* const hat = {
+        name: 'hat',
+        img: 
+    } */
 
     return (
         <div className='hat'>
@@ -10,5 +14,3 @@ const Hat = () => {
         </div>
     )
 };
-
-export default Hat;

@@ -1,8 +1,12 @@
 import React from 'react';
 
-const FieldCharacter = () => {
-
+export default function FieldCharacter() {
     const fieldCharacter = '░';
+
+    /* const fieldCharacter = {
+        name: 'fieldCharacter',
+        img: 
+    } */
 
     return (
         <div className='fieldCharacter'>
@@ -10,5 +14,3 @@ const FieldCharacter = () => {
         </div>
     )
 }
-
-export default FieldCharacter;

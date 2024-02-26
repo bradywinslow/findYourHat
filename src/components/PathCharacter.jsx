@@ -1,8 +1,12 @@
 import React from 'react';
 
-const PathCharacter = () => {
-    
+export default function PathCharacter() {
     const pathCharacter = '*';
+
+    /* const pathCharacter = {
+        name: 'pathCharacter',
+        img: 
+    } */
 
     return (
         <div className='player'>
@@ -10,5 +14,3 @@ const PathCharacter = () => {
         </div>
     )
 };
-
-export default PathCharacter;
