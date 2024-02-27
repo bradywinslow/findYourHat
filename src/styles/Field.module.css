@@ -1,0 +1,12 @@
+.field {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
+    font-size: 3.5rem;
+}
+
+.tableRows {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}

@@ -4,6 +4,7 @@ import Hat from './Hat.jsx';
 import Hole from './Hole.jsx';
 import FieldCharacter from './FieldCharacter.jsx';
 import PathCharacter from './PathCharacter.jsx';
+import styles from '../styles/Field.module.css';
 
 const fieldData = [
     { firstCharacter: '*', secondCharacter: '░', thirdCharacter: 'O' },
@@ -39,11 +40,11 @@ export default function Field({ height, width, percentage }) {
     } */
 
     return (
-        <div className='field'>
+        <div className={styles.field}>
             <table>
                 {fieldData.map((val, key) => {
                     return (
-                        <tr key={key}>
+                        <tr className={styles.tableRows} key={key}>
                             <td>{val.firstCharacter}</td>
                             <td>{val.secondCharacter}</td>
                             <td>{val.thirdCharacter}</td>
