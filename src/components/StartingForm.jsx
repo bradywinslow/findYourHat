@@ -37,7 +37,7 @@ export default function StaringForm() {
                             min='3'
                             max='100'
                             value={width}
-                            onChange={handleWidthInput}    
+                            onSubmit={handleWidthInput}    
                         />
                     </div>
                     <div>
@@ -50,7 +50,7 @@ export default function StaringForm() {
                             min='3'
                             max='100'
                             value={height}
-                            onChange={handleHeightInput}
+                            onSubmit={handleHeightInput}
                         />
                     </div>
                     <div>
@@ -64,7 +64,7 @@ export default function StaringForm() {
                             max='50'
                             step='10'
                             value={percentage}
-                            onChange={handlePercentageInput}
+                            onSubmit={handlePercentageInput}
                         />
                     </div>
                     <div>
