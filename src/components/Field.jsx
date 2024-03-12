@@ -12,14 +12,10 @@ const fieldData = [
     { firstCharacter: '░', secondCharacter: '^', thirdCharacter: '░' },
 ];
 
-export default function Field({ height, width, percentage }) {
-    // const [field, setField] = useState(generateField(height, width, percentage));
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
-    const [gameOver, setGameOver] = useState(false);
+export default function Field({ width, height, percentage }) {
 
     /* // Takes 3 parameters (width, height, percentage) to generate a randomized two-dimentional array representing the field --> has one hat and one or more holes
-    function generateField(height, width, percentage) {
+    function generateField(width, height, percentage) {
         let result = [];
         for (let i = 0; i < height; i++) {
             result[i] = [];

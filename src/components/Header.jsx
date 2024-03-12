@@ -6,8 +6,13 @@ import { faPiedPiperHat } from '@fortawesome/free-brands-svg-icons';
 export default function Header() {
     return (
         <div className={styles.HeaderContainer}>
-            <h1 className={styles.HeaderTitle}>Find Your Hat</h1>
-            <FontAwesomeIcon icon={faPiedPiperHat} className={styles.HeaderHat}/>
+            <div className={styles.HeaderTitle}>
+                <h1 className={styles.Title}>Find Your Hat</h1>
+                <FontAwesomeIcon icon={faPiedPiperHat} className={styles.HeaderHat}/>
+            </div>
+            <div className={styles.GameInstructions}>
+                <p>Navigate the field to find your hat and make sure not to fall into a hole!</p>
+            </div>
         </div>
     )
 }

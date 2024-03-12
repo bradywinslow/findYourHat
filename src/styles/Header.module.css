@@ -1,18 +1,29 @@
 .HeaderContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 9.5rem;
-    gap: 1rem;
     color: #383838;
     background-color: #59EE29;
 }
 
 .HeaderTitle {
+    display: flex;
+    align-items: center;
+    height: 7.5rem;
+    gap: 1rem;
+}
+
+.Title {
     font-size: 3rem;
 }
 
 .HeaderHat {
     height: 3rem;
     color: #67221B;
+}
+
+.GameInstructions {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
