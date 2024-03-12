@@ -14,7 +14,7 @@ const fieldData = [
 
 export default function Field({ width, height, percentage }) {
 
-    /* // Takes 3 parameters (width, height, percentage) to generate a randomized two-dimentional array representing the field --> has one hat and one or more holes
+    // Takes 3 parameters (width, height, percentage) to generate a randomized two-dimentional array representing the field --> has one hat and one or more holes
     function generateField(width, height, percentage) {
         let result = [];
         for (let i = 0; i < height; i++) {
@@ -33,7 +33,7 @@ export default function Field({ width, height, percentage }) {
         result[0][0] = PathCharacter;
         result[(Math.floor(Math.random() * height))][(Math.floor(Math.random() * width))] = Hat;
         return result;
-    } */
+    }
 
     return (
         <div className={styles.field}>

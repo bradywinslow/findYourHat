@@ -61,7 +61,8 @@ export default function StaringForm() {
                             id='percentage'
                             required
                             min='0'
-                            max='65'
+                            max='50'
+                            step='10'
                             value={percentage}
                             onChange={handlePercentageInput}
                         />
