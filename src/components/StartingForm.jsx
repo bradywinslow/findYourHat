@@ -22,7 +22,9 @@ export default function StaringForm() {
 
     return (
         <div>
-            <p>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
+            <div className={styles.Instructions}>
+                <p>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
+            </div>
             <form>
                 <div className={styles.StartingForm}>
                     <div>
