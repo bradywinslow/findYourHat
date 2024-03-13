@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import styles from '../styles/StartingForm.module.css';
 import Field from './Field.jsx';
 import MovementButtons from './MovementButtons.jsx';
+import { generateField } from '../generateFieldLogic/generateField.js';
 
 export default function StaringForm() {
-    const [width, setWidth] = useState();
-    const [height, setHeight] = useState();
-    const [percentage, setPercentage] = useState();
+    const [width, setWidth] = useState(3);
+    const [height, setHeight] = useState(3);
+    const [percentage, setPercentage] = useState(10);
+    const [fieldData, setFieldData] = useState([]);
 
     function handleWidthInput(e) {
         setWidth(e.target.value);
@@ -20,12 +22,18 @@ export default function StaringForm() {
         setPercentage(e.target.value);
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        const newFieldData = generateField(width, height, percentage);
+        setFieldData(newFieldData);
+    }
+
     return (
         <div>
             <div className={styles.Instructions}>
                 <p>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className={styles.StartingForm}>
                     <div>
                         <label for='width'>Width (3-100): </label>
@@ -37,7 +45,7 @@ export default function StaringForm() {
                             min='3'
                             max='100'
                             value={width}
-                            onSubmit={handleWidthInput}    
+                            onChange={handleWidthInput}    
                         />
                     </div>
                     <div>
@@ -50,7 +58,7 @@ export default function StaringForm() {
                             min='3'
                             max='100'
                             value={height}
-                            onSubmit={handleHeightInput}
+                            onChange={handleHeightInput}
                         />
                     </div>
                     <div>
@@ -64,7 +72,7 @@ export default function StaringForm() {
                             max='50'
                             step='10'
                             value={percentage}
-                            onSubmit={handlePercentageInput}
+                            onChange={handlePercentageInput}
                         />
                     </div>
                     <div>
@@ -72,7 +80,7 @@ export default function StaringForm() {
                     </div>    
                 </div>
             </form>
-            <Field width={width} height={height} percentage={percentage} />
+            <Field fieldData={fieldData} />
             <MovementButtons />
         </div>
     )
