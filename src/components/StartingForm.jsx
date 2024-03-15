@@ -9,6 +9,8 @@ export default function StaringForm() {
     const [height, setHeight] = useState(3);
     const [percentage, setPercentage] = useState(10);
     const [fieldData, setFieldData] = useState([]);
+    // const [x, setX] = useState(0);
+    // const [y, setY] = useState(0);
 
     function handleWidthInput(e) {
         setWidth(e.target.value);
@@ -27,6 +29,49 @@ export default function StaringForm() {
         const newFieldData = generateField(width, height, percentage);
         setFieldData(newFieldData);
     }
+
+    /* function moveUp(e) {
+        setY(y - 1);
+    }
+
+    function moveDown(e) {
+        setY(y + 1);
+    }
+
+    function moveLeft(e) {
+        setX(x - 1);
+    }
+    
+    function moveRight(e) {
+        setX(x + 1);
+    } */
+    
+    // Handles asking and accepting user input, and updating the current location
+    /* function move() {
+        let movementInput = prompt('Which way? u = up; d = down; l = left; r = right: ');
+        
+        if (movementInput === 'u') {
+            setY(y - 1);
+        } else if (movementInput === 'd') {
+            setY(y + 1);
+        } else if (movementInput === 'l') {
+            setX(x - 1);
+        } else if (movementInput === 'r') {
+            setX(x + 1);
+        } else {
+            console.log('Wrong input. Please try again.');
+        }
+
+        if (y < 0 || y > height) {
+            setY(undefined);
+        } else if (x < 0 || x > width) {
+            setX(undefined);
+        } else if (fieldData[y][x] === hat) {
+            fieldData[y][x] = Hat;
+        } else if (fieldData[y][x] !== hole) {
+            fieldData[y][x] = pathCharacter;
+        }
+    } */
 
     return (
         <div>

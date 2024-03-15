@@ -12,7 +12,7 @@ export default function Field({ fieldData }) {
                             <tr className={styles.tableRows} key={rowIndex}>
                                 {row.map((cell, cellIndex) => {
                                     return (
-                                        <td key={cellIndex}>
+                                        <td className={styles.tableData} key={cellIndex}>
                                             {cell}
                                         </td>
                                     )

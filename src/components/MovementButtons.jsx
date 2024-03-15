@@ -10,20 +10,20 @@ export default function MovementButtons() {
     const [movementInput, setMovementInput] = useState();
 
     const moveUp = (e) => {
-        setMovementInput(e.input.change);
-    };
+        setMovementInput(movementInput);
+    }
 
     const moveLeft = (e) => {
 
-    };
+    }
     
     const moveRight = (e) => {
 
-    };
+    }
 
     const moveDown = (e) => {
 
-    };
+    }
     
     // Handles asking and accepting user input, and updating the current location
     /* function move() {

@@ -9,11 +9,11 @@ function generateField(width, height, percentage) {
     for (let i = 0; i < height; i++) {
         result[i] = [];
         for (let j = 0; j < width; j++) {
-            const randomNumber = (Math.floor(Math.random() * 11));
-            
-            if (randomNumber <= percentage / 10) {
+            const randomNumber = (Math.floor(Math.random() * 100));
+            console.log(randomNumber);
+            if (randomNumber < percentage) {
                 result[i][j] = hole;
-            } else if (randomNumber > percentage / 10) {
+            } else {
                 result[i][j] = fieldCharacter;
             }
         }           
@@ -23,5 +23,15 @@ function generateField(width, height, percentage) {
     result[(Math.floor(Math.random() * height))][(Math.floor(Math.random() * width))] = hat;
     return result;
 }
+
+// Run the main game loop until the game is won or lost
+/* function runGameLoop() {
+    let gameOver = false;
+    while (!gameOver) {
+        print();
+        move();
+        gameOver = result();
+    }
+} */
 
 export { generateField };

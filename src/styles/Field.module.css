@@ -7,6 +7,14 @@
 
 .tableRows {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 2rem;
+}
+
+.tableData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
 }
