@@ -36,27 +36,27 @@ export default function StaringForm() {
             <form onSubmit={handleSubmit}>
                 <div className={styles.StartingForm}>
                     <div>
-                        <label for='width'>Width (3-100): </label>
+                        <label for='width'>Width (3-15): </label>
                         <input
                             type='number'
                             name='width'
                             id='width'
                             required
                             min='3'
-                            max='100'
+                            max='15'
                             value={width}
                             onChange={handleWidthInput}    
                         />
                     </div>
                     <div>
-                        <label for='height'>Height (3-100): </label>
+                        <label for='height'>Height (3-15): </label>
                         <input
                             type='number'
                             name='height'
                             id='height'
                             required
                             min='3'
-                            max='100'
+                            max='15'
                             value={height}
                             onChange={handleHeightInput}
                         />
