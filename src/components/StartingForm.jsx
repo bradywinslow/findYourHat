@@ -72,6 +72,10 @@ export default function StaringForm() {
             console.log('You found your hat. Congratulations, you win!');
             setGameOver(true);
             return newFieldData;
+        } else if (newFieldData[y][x] === pathCharacter) {
+            console.log('You backtracked. Sorry, you lose!');
+            setGameOver(true);
+            return newFieldData;
         } else {
             if (newFieldData[y][x] !== pathCharacter) {
                 newFieldData[y][x] = pathCharacter;
