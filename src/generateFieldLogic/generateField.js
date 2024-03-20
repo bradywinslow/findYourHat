@@ -1,4 +1,4 @@
-import { fieldCharacter, hat, hole, pathCharacter } from '../characters/characters.js';
+import { fieldCharacter, hat, hole, player } from '../characters/characters.js';
 
 // Takes 3 parameters (width, height, percentage) to generate a randomized two-dimentional array representing the field --> has one hat and one or more holes
 function generateField(width, height, percentage) {
@@ -16,7 +16,7 @@ function generateField(width, height, percentage) {
         }           
     }
 
-    result[0][0] = pathCharacter;
+    result[0][0] = player;
 
     // Generate random coordinates for hat that do not place it in the top left corner (0, 0)
     let hatX = 0;
@@ -28,7 +28,7 @@ function generateField(width, height, percentage) {
     } while (hatX === 0 && hatY === 0);
 
     result[hatY][hatX] = hat;
-    
+
     return result;
 }
 

@@ -3,7 +3,7 @@ import styles from '../styles/StartingForm.module.css';
 import Field from './Field.jsx';
 import MovementButtons from './MovementButtons.jsx';
 import { generateField } from '../generateFieldLogic/generateField.js';
-import { hat, hole, pathCharacter } from '../characters/characters.js';
+import { hat, hole, pathCharacter, player } from '../characters/characters.js';
 
 export default function StaringForm() {
     const [width, setWidth] = useState(3);
@@ -33,24 +33,36 @@ export default function StaringForm() {
     }
 
     function moveUp() {
+        if (fieldData[y][x] !== hole || fieldData[y][x] !== hat) {
+            fieldData[y][x] = pathCharacter;
+        }
         const newY = y - 1;
         setY(newY);
         setFieldData(prevFieldData => updateField(prevFieldData, x, newY));
     }
 
     function moveLeft() {
+        if (fieldData[y][x] !== hole || fieldData[y][x] !== hat) {
+            fieldData[y][x] = pathCharacter;
+        }
         const newX = x - 1;
         setX(newX);
         setFieldData(prevFieldData => updateField(prevFieldData, newX, y));
     }
     
     function moveRight() {
+        if (fieldData[y][x] !== hole || fieldData[y][x] !== hat) {
+            fieldData[y][x] = pathCharacter;
+        }
         const newX = x + 1;
         setX(newX);
         setFieldData(prevFieldData => updateField(prevFieldData, newX, y));
     }
 
     function moveDown() {
+        if (fieldData[y][x] !== hole || fieldData[y][x] !== hat) {
+            fieldData[y][x] = pathCharacter;
+        }
         const newY = y + 1;
         setY(newY);
         setFieldData(prevFieldData => updateField(prevFieldData, x, newY));
@@ -78,7 +90,7 @@ export default function StaringForm() {
             return newFieldData;
         } else {
             if (newFieldData[y][x] !== pathCharacter) {
-                newFieldData[y][x] = pathCharacter;
+                newFieldData[y][x] = player;
             }
             return newFieldData;
         }
