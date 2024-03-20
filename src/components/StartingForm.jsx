@@ -3,14 +3,16 @@ import styles from '../styles/StartingForm.module.css';
 import Field from './Field.jsx';
 import MovementButtons from './MovementButtons.jsx';
 import { generateField } from '../generateFieldLogic/generateField.js';
+import { hat, hole, pathCharacter } from '../characters/characters.js';
 
 export default function StaringForm() {
     const [width, setWidth] = useState(3);
     const [height, setHeight] = useState(3);
     const [percentage, setPercentage] = useState(10);
     const [fieldData, setFieldData] = useState([]);
-    // const [x, setX] = useState(0);
-    // const [y, setY] = useState(0);
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0);
+    const [gameOver, setGameOver] = useState(false);
 
     function handleWidthInput(e) {
         setWidth(e.target.value);
@@ -30,48 +32,53 @@ export default function StaringForm() {
         setFieldData(newFieldData);
     }
 
-    /* function moveUp(e) {
-        setY(y - 1);
+    function moveUp() {
+        const newY = y - 1;
+        setY(newY);
+        setFieldData(prevFieldData => updateField(prevFieldData, x, newY));
     }
 
-    function moveDown(e) {
-        setY(y + 1);
+    function moveLeft() {
+        const newX = x - 1;
+        setX(newX);
+        setFieldData(prevFieldData => updateField(prevFieldData, newX, y));
+    }
+    
+    function moveRight() {
+        const newX = x + 1;
+        setX(newX);
+        setFieldData(prevFieldData => updateField(prevFieldData, newX, y));
     }
 
-    function moveLeft(e) {
-        setX(x - 1);
+    function moveDown() {
+        const newY = y + 1;
+        setY(newY);
+        setFieldData(prevFieldData => updateField(prevFieldData, x, newY));
     }
-    
-    function moveRight(e) {
-        setX(x + 1);
-    } */
-    
-    // Handles asking and accepting user input, and updating the current location
-    /* function move() {
-        let movementInput = prompt('Which way? u = up; d = down; l = left; r = right: ');
-        
-        if (movementInput === 'u') {
-            setY(y - 1);
-        } else if (movementInput === 'd') {
-            setY(y + 1);
-        } else if (movementInput === 'l') {
-            setX(x - 1);
-        } else if (movementInput === 'r') {
-            setX(x + 1);
+
+    // Helper function to update the fieldData array
+    function updateField(fieldData, x, y) {
+        const newFieldData = fieldData.map(row => [...row]);
+
+        if (y < 0 || y >= height || x < 0 || x >= width) {
+            console.log('You moved out of bounds. Sorry, you lose!');
+            setGameOver(true);
+            return newFieldData;
+        } else if (newFieldData[y][x] === hole) {
+            console.log('You fell in a hole. Sorry, you lose!');
+            setGameOver(true);
+            return newFieldData;
+        } else if (newFieldData[y][x] === hat) {
+            console.log('You found your hat. Congratulations, you win!');
+            setGameOver(true);
+            return newFieldData;
         } else {
-            console.log('Wrong input. Please try again.');
+            if (newFieldData[y][x] !== pathCharacter) {
+                newFieldData[y][x] = pathCharacter;
+            }
+            return newFieldData;
         }
-
-        if (y < 0 || y > height) {
-            setY(undefined);
-        } else if (x < 0 || x > width) {
-            setX(undefined);
-        } else if (fieldData[y][x] === hat) {
-            fieldData[y][x] = Hat;
-        } else if (fieldData[y][x] !== hole) {
-            fieldData[y][x] = pathCharacter;
-        }
-    } */
+    }
 
     return (
         <div>
@@ -126,7 +133,12 @@ export default function StaringForm() {
                 </div>
             </form>
             <Field fieldData={fieldData} />
-            <MovementButtons />
+            <MovementButtons 
+                moveUp={moveUp}
+                moveLeft={moveLeft}
+                moveRight={moveRight}
+                moveDown={moveDown}
+            />
         </div>
     )
 }
