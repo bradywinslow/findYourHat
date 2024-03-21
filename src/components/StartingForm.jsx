@@ -110,7 +110,7 @@ export default function StaringForm() {
             <form onSubmit={handleSubmit}>
                 <div className={styles.StartingForm}>
                     <div>
-                        <label for='width'>Width (3-15): </label>
+                        <label htmlFor='width'>Width (3-15): </label>
                         <input
                             type='number'
                             name='width'
@@ -123,7 +123,7 @@ export default function StaringForm() {
                         />
                     </div>
                     <div>
-                        <label for='height'>Height (3-15): </label>
+                        <label htmlFor='height'>Height (3-15): </label>
                         <input
                             type='number'
                             name='height'
@@ -136,7 +136,7 @@ export default function StaringForm() {
                         />
                     </div>
                     <div>
-                        <label for='percentage'>Percentage: </label>
+                        <label htmlFor='percentage'>Percentage: </label>
                         <input
                             type='number'
                             name='percentage'
