@@ -4,8 +4,8 @@ import styles from '../styles/Field.module.css';
 export default function Field({ fieldData }) {
 
     return (
-        <div className={styles.field}>
-            <table>
+        <div className={styles.fieldContainer}>
+            <table className={styles.field}>
                 <tbody>
                     {fieldData.map((row, rowIndex) => {
                         return (

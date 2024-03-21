@@ -1,11 +1,35 @@
-.Instructions {
-    text-align: center;
-    margin-bottom: 2rem;
+.startingContainer {
+    color: #383838;
 }
 
-.StartingForm {
+.startingInstructions {
+    text-align: center;
+    margin: 0 2rem 2rem 2rem;
+}
+
+.startingForm {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.inputField {
+    background-color: ghostwhite;
+}
+
+.submitButtonContainer {
+    display: flex;
     align-items: center;
-    gap: .75rem;
+}
+
+.submitButton {
+    background-color: #67221B;
+    color: #EFC8C3;
+    padding: 0.5rem;
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+    width: 6rem;
+    border-radius: 15px;
+    border: none;
 }

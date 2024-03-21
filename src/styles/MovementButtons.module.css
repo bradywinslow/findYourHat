@@ -15,6 +15,18 @@
     justify-content: center;
 }
 
+button {
+    padding: 0.5rem;
+    font: inherit;
+    line-height: 1;
+    width: 9rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #67221B;
+    color: #EFC8C3;
+}
+
 .faArrowUp, .faArrowLeft, .faArrowRight, .faArrowDown {
     margin-left: 0.5rem;
+    background-color: #67221B;
 }

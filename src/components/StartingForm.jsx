@@ -103,54 +103,59 @@ export default function StaringForm() {
     }
 
     return (
-        <div>
-            <div className={styles.Instructions}>
+        <div className={styles.startingContainer}>
+            <div className={styles.startingInstructions}>
                 <p>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
             </div>
             <form onSubmit={handleSubmit}>
-                <div className={styles.StartingForm}>
+                <div className={styles.startingForm}>
                     <div>
-                        <label htmlFor='width'>Width (3-15): </label>
-                        <input
-                            type='number'
-                            name='width'
-                            id='width'
-                            required
-                            min='3'
-                            max='15'
-                            value={width}
-                            onChange={handleWidthInput}    
-                        />
+                        <div>
+                            <label htmlFor='width'>Width (3-15): </label>
+                            <input
+                                className={styles.inputField}
+                                type='number'
+                                name='width'
+                                id='width'
+                                required
+                                min='3'
+                                max='15'
+                                value={width}
+                                onChange={handleWidthInput}    
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor='height'>Height (3-15): </label>
+                            <input
+                                className={styles.inputField}
+                                type='number'
+                                name='height'
+                                id='height'
+                                required
+                                min='3'
+                                max='15'
+                                value={height}
+                                onChange={handleHeightInput}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor='percentage'>Percentage: </label>
+                            <input
+                                className={styles.inputField}
+                                type='number'
+                                name='percentage'
+                                id='percentage'
+                                required
+                                min='0'
+                                max='50'
+                                step='10'
+                                value={percentage}
+                                onChange={handlePercentageInput}
+                            />
+                        </div>
                     </div>
-                    <div>
-                        <label htmlFor='height'>Height (3-15): </label>
-                        <input
-                            type='number'
-                            name='height'
-                            id='height'
-                            required
-                            min='3'
-                            max='15'
-                            value={height}
-                            onChange={handleHeightInput}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor='percentage'>Percentage: </label>
-                        <input
-                            type='number'
-                            name='percentage'
-                            id='percentage'
-                            required
-                            min='0'
-                            max='50'
-                            step='10'
-                            value={percentage}
-                            onChange={handlePercentageInput}
-                        />
-                    </div>
-                    <div>
-                        <input type='submit' value="Let's Get Started!"></input>
+                    <div className={styles.submitButtonContainer}>
+                        <input className={styles.submitButton} type='submit' value="Play"></input>
                     </div>    
                 </div>
             </form>
