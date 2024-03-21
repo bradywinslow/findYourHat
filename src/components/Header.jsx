@@ -11,7 +11,7 @@ export default function Header() {
                 <FontAwesomeIcon icon={faPiedPiperHat} className={styles.HeaderHat}/>
             </div>
             <div className={styles.GameInstructions}>
-                <p>Navigate the field to find your hat. Make sure not to fall into a hole!</p>
+                <p>Navigate the field while avoiding the holes to find your hat!</p>
             </div>
         </div>
     )
