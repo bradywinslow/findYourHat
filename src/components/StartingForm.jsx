@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/StartingForm.module.css';
 import Field from './Field.jsx';
+import GameOverModal from './GameOverModal.jsx';
 import MovementButtons from './MovementButtons.jsx';
 import { generateField } from '../generateFieldLogic/generateField.js';
 import { hat, hole, pathCharacter, player } from '../characters/characters.js';
@@ -12,7 +13,8 @@ export default function StaringForm() {
     const [fieldData, setFieldData] = useState([]);
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
-    const [gameOver, setGameOver] = useState(false);
+    const [isGameOver, setIsGameOver] = useState(false);
+    const [gameOverMessage, setGameOverMessage] = useState();
 
     function handleWidthInput(e) {
         setWidth(e.target.value);
@@ -73,20 +75,20 @@ export default function StaringForm() {
         const newFieldData = fieldData.map(row => [...row]);
 
         if (y < 0 || y >= height || x < 0 || x >= width) {
-            console.log('You moved out of bounds. Sorry, you lose!');
-            setGameOver(true);
+            setIsGameOver(true);
+            setGameOverMessage('You moved out of bounds. Sorry, you lose!');
             return newFieldData;
         } else if (newFieldData[y][x] === hole) {
-            console.log('You fell in a hole. Sorry, you lose!');
-            setGameOver(true);
+            setIsGameOver(true);
+            setGameOverMessage('You fell in a hole. Sorry, you lose!');            
             return newFieldData;
         } else if (newFieldData[y][x] === hat) {
-            console.log('You found your hat. Congratulations, you win!');
-            setGameOver(true);
+            setIsGameOver(true);
+            setGameOverMessage('You found your hat. Congratulations, you win!');            
             return newFieldData;
         } else if (newFieldData[y][x] === pathCharacter) {
-            console.log('You backtracked. Sorry, you lose!');
-            setGameOver(true);
+            setIsGameOver(true);
+            setGameOverMessage('You backtracked. Sorry, you lose!');            
             return newFieldData;
         } else {
             if (newFieldData[y][x] !== pathCharacter) {
@@ -94,6 +96,10 @@ export default function StaringForm() {
             }
             return newFieldData;
         }
+    }
+
+    function refreshPage() {
+        window.location.reload();
     }
 
     return (
@@ -148,13 +154,14 @@ export default function StaringForm() {
                     </div>    
                 </div>
             </form>
-            <Field fieldData={fieldData} />
+            <Field fieldData={fieldData}/>
             <MovementButtons 
                 moveUp={moveUp}
                 moveLeft={moveLeft}
                 moveRight={moveRight}
                 moveDown={moveDown}
             />
+            {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} refreshPage={refreshPage}/>}
         </div>
     )
 }
