@@ -7,7 +7,6 @@ function generateField(width, height, percentage) {
         result[i] = [];
         for (let j = 0; j < width; j++) {
             const randomNumber = (Math.floor(Math.random() * 100));
-            console.log(randomNumber);
             if (randomNumber < percentage) {
                 result[i][j] = hole;
             } else {
