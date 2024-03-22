@@ -22,11 +22,11 @@ button {
     width: 9rem;
     border-radius: 15px;
     border: none;
-    background-color: #67221B;
+    background-color: #551700;
     color: #EFC8C3;
 }
 
 .faArrowUp, .faArrowLeft, .faArrowRight, .faArrowDown {
     margin-left: 0.5rem;
-    background-color: #67221B;
+    background-color: #551700;
 }
