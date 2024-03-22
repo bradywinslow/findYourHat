@@ -13,6 +13,7 @@
 .modal {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: ghostwhite;
     padding: 2rem 2rem 2rem 2rem;
