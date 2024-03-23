@@ -110,8 +110,8 @@ export default function StaringForm() {
             <form onSubmit={handleSubmit}>
                 <div className={styles.startingForm}>
                     <div>
-                        <div>
-                            <label htmlFor='width'>Width (3-15): </label>
+                        <div className={styles.width}>
+                            <label htmlFor='width'>Width (3-15)</label>
                             <input
                                 className={styles.inputField}
                                 type='number'
@@ -124,8 +124,8 @@ export default function StaringForm() {
                                 onChange={handleWidthInput}    
                             />
                         </div>
-                        <div>
-                            <label htmlFor='height'>Height (3-15): </label>
+                        <div className={styles.height}>
+                            <label htmlFor='height'>Height (3-15)</label>
                             <input
                                 className={styles.inputField}
                                 type='number'
@@ -138,8 +138,8 @@ export default function StaringForm() {
                                 onChange={handleHeightInput}
                             />
                         </div>
-                        <div>
-                            <label htmlFor='percentage'>Percentage: </label>
+                        <div className={styles.percentage}>
+                            <label htmlFor='percentage'>Percentage</label>
                             <input
                                 className={styles.inputField}
                                 type='number'
