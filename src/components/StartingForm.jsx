@@ -144,16 +144,16 @@ export default function StaringForm() {
                                 />
                             </div>
                             <div className={styles.percentage}>
-                                <label htmlFor='percentage'>Percentage</label>
+                                <label htmlFor='percentage'>Percentage (10-50)</label>
                                 <input
                                     className={styles.inputField}
                                     type='number'
                                     name='percentage'
                                     id='percentage'
                                     required
-                                    min='0'
+                                    min='10'
                                     max='50'
-                                    step='10'
+                                    step='1'
                                     value={percentage}
                                     onChange={handlePercentageInput}
                                 />

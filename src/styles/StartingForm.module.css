@@ -24,7 +24,6 @@ form {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 6.5rem;
 }
 
 .inputField {
@@ -39,6 +38,10 @@ form {
 
 label {
     margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+input {
     text-align: center;
 }
 
@@ -65,4 +68,14 @@ label {
 
 .submitButton:active {
     background-color:rgb(85, 23, 0, 0.75);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
 }
