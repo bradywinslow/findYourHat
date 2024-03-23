@@ -13,7 +13,7 @@ export default function Field({ fieldData }) {
                                 {row.map((cell, cellIndex) => {
                                     return (
                                         <td className={styles.tableData} key={cellIndex}>
-                                            <img src={cell}></img>
+                                            <img alt='Game field character' src={cell}></img>
                                         </td>
                                     )
                                 })}
