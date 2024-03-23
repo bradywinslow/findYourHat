@@ -11,6 +11,7 @@ export default function StaringForm() {
     const [height, setHeight] = useState(3);
     const [percentage, setPercentage] = useState(10);
     const [isPlayClicked, setIsPlayClicked] = useState(false);
+    const [isFieldNotDisplayed, setIsFieldNotDisplayed] = useState(true);
     const [fieldData, setFieldData] = useState([]);
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
@@ -32,6 +33,7 @@ export default function StaringForm() {
     function handleSubmit(e) {
         e.preventDefault();
         setIsPlayClicked(true);
+        setIsFieldNotDisplayed(false);
         const newFieldData = generateField(width, height, percentage);
         setFieldData(newFieldData);
     }
@@ -106,7 +108,7 @@ export default function StaringForm() {
 
     return (
         <>
-            <div className={styles.startingContainer}>
+            {isFieldNotDisplayed && <div className={styles.startingContainer}>
                 <div className={styles.startingInstructionsContainer}>
                     <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
                 </div>
@@ -162,7 +164,7 @@ export default function StaringForm() {
                         </div>    
                     </div>
                 </form>
-            </div>
+            </div>}
             <Field fieldData={fieldData}/>
             {isPlayClicked && <MovementButtons 
                 moveUp={moveUp}
