@@ -116,7 +116,7 @@ export default function StaringForm() {
                     <div className={styles.startingForm}>
                         <div>
                             <div className={styles.width}>
-                                <label htmlFor='width'>Width (3-15)</label>
+                                <label htmlFor='width'>Width (3-10)</label>
                                 <input
                                     className={styles.inputField}
                                     type='number'
@@ -124,13 +124,13 @@ export default function StaringForm() {
                                     id='width'
                                     required
                                     min='3'
-                                    max='15'
+                                    max='10'
                                     value={width}
                                     onChange={handleWidthInput}    
                                 />
                             </div>
                             <div className={styles.height}>
-                                <label htmlFor='height'>Height (3-15)</label>
+                                <label htmlFor='height'>Height (3-10)</label>
                                 <input
                                     className={styles.inputField}
                                     type='number'
@@ -138,7 +138,7 @@ export default function StaringForm() {
                                     id='height'
                                     required
                                     min='3'
-                                    max='15'
+                                    max='10'
                                     value={height}
                                     onChange={handleHeightInput}
                                 />
