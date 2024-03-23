@@ -1,4 +1,7 @@
-import { fieldCharacter, hat, hole, player } from '../characters/characters.js';
+import fieldCharacter from '../characters/fieldCharacter.png'
+import hole from '../characters/hole.png';
+import player from '../characters/player.png';
+import hat from '../characters/hat.png';
 
 // Takes 3 parameters (width, height, percentage) to generate a randomized two-dimentional array representing the field --> has one hat and one or more holes
 function generateField(width, height, percentage) {

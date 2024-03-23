@@ -4,7 +4,11 @@ import Field from './Field.jsx';
 import GameOverModal from './GameOverModal.jsx';
 import MovementButtons from './MovementButtons.jsx';
 import { generateField } from '../generateFieldLogic/generateField.js';
-import { hat, hole, pathCharacter, player } from '../characters/characters.js';
+import hat from '../characters/hat.png';
+import hole from '../characters/hole.png';
+import pathCharacter from '../characters/pathCharacter.png';
+import player from '../characters/player.png';
+
 
 export default function StaringForm() {
     const [width, setWidth] = useState(3);
@@ -160,7 +164,7 @@ export default function StaringForm() {
                             </div>
                         </div>
                         <div className={styles.submitButtonContainer}>
-                            <input className={styles.submitButton} type='submit' value="Play"></input>
+                            <button className={styles.submitButton}>Play</button>
                         </div>    
                     </div>
                 </form>

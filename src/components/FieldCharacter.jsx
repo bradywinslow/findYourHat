@@ -5,7 +5,7 @@ export default function FieldCharacter() {
 
     /* const fieldCharacter = {
         name: 'fieldCharacter',
-        img: 
+        img: ''
     } */
 
     return (
