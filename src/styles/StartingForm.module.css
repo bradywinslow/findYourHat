@@ -39,6 +39,7 @@ form {
 
 label {
     margin-bottom: 0.25rem;
+    text-align: center;
 }
 
 .submitButtonContainer {
@@ -56,4 +57,12 @@ label {
     width: 6rem;
     border-radius: 15px;
     border: none;
+}
+
+.submitButton:hover {
+    background-color:rgb(85, 23, 0, 0.5);
+}
+
+.submitButton:active {
+    background-color:rgb(85, 23, 0, 0.75);
 }

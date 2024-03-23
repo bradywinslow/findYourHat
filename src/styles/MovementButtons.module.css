@@ -27,7 +27,15 @@ button {
     color: #EFC8C3;
 }
 
+button:hover {
+    background-color:rgb(85, 23, 0, 0.5);
+}
+
+button:active {
+    background-color:rgb(85, 23, 0, 0.75);
+}
+
 .faArrowUp, .faArrowLeft, .faArrowRight, .faArrowDown {
     margin-left: 0.5rem;
-    background-color: #551700;
+    background-color: transparent;
 }
