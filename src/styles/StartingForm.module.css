@@ -2,9 +2,15 @@
     color: #383838;
 }
 
-.startingInstructions {
+.startingInstructionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startingInstructionsText {
     text-align: center;
-    margin: 0 2rem 2rem 2rem;
+    width: 32rem;
 }
 
 form {

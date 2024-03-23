@@ -10,6 +10,7 @@ export default function StaringForm() {
     const [width, setWidth] = useState(3);
     const [height, setHeight] = useState(3);
     const [percentage, setPercentage] = useState(10);
+    const [isPlayClicked, setIsPlayClicked] = useState(false);
     const [fieldData, setFieldData] = useState([]);
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
@@ -30,6 +31,7 @@ export default function StaringForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
+        setIsPlayClicked(true);
         const newFieldData = generateField(width, height, percentage);
         setFieldData(newFieldData);
     }
@@ -103,70 +105,72 @@ export default function StaringForm() {
     }
 
     return (
-        <div className={styles.startingContainer}>
-            <div className={styles.startingInstructions}>
-                <p>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
-            </div>
-            <form onSubmit={handleSubmit}>
-                <div className={styles.startingForm}>
-                    <div>
-                        <div className={styles.width}>
-                            <label htmlFor='width'>Width (3-15)</label>
-                            <input
-                                className={styles.inputField}
-                                type='number'
-                                name='width'
-                                id='width'
-                                required
-                                min='3'
-                                max='15'
-                                value={width}
-                                onChange={handleWidthInput}    
-                            />
-                        </div>
-                        <div className={styles.height}>
-                            <label htmlFor='height'>Height (3-15)</label>
-                            <input
-                                className={styles.inputField}
-                                type='number'
-                                name='height'
-                                id='height'
-                                required
-                                min='3'
-                                max='15'
-                                value={height}
-                                onChange={handleHeightInput}
-                            />
-                        </div>
-                        <div className={styles.percentage}>
-                            <label htmlFor='percentage'>Percentage</label>
-                            <input
-                                className={styles.inputField}
-                                type='number'
-                                name='percentage'
-                                id='percentage'
-                                required
-                                min='0'
-                                max='50'
-                                step='10'
-                                value={percentage}
-                                onChange={handlePercentageInput}
-                            />
-                        </div>
-                    </div>
-                    <div className={styles.submitButtonContainer}>
-                        <input className={styles.submitButton} type='submit' value="Play"></input>
-                    </div>    
+        <>
+            <div className={styles.startingContainer}>
+                <div className={styles.startingInstructionsContainer}>
+                    <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
                 </div>
-            </form>
+                <form onSubmit={handleSubmit}>
+                    <div className={styles.startingForm}>
+                        <div>
+                            <div className={styles.width}>
+                                <label htmlFor='width'>Width (3-15)</label>
+                                <input
+                                    className={styles.inputField}
+                                    type='number'
+                                    name='width'
+                                    id='width'
+                                    required
+                                    min='3'
+                                    max='15'
+                                    value={width}
+                                    onChange={handleWidthInput}    
+                                />
+                            </div>
+                            <div className={styles.height}>
+                                <label htmlFor='height'>Height (3-15)</label>
+                                <input
+                                    className={styles.inputField}
+                                    type='number'
+                                    name='height'
+                                    id='height'
+                                    required
+                                    min='3'
+                                    max='15'
+                                    value={height}
+                                    onChange={handleHeightInput}
+                                />
+                            </div>
+                            <div className={styles.percentage}>
+                                <label htmlFor='percentage'>Percentage</label>
+                                <input
+                                    className={styles.inputField}
+                                    type='number'
+                                    name='percentage'
+                                    id='percentage'
+                                    required
+                                    min='0'
+                                    max='50'
+                                    step='10'
+                                    value={percentage}
+                                    onChange={handlePercentageInput}
+                                />
+                            </div>
+                        </div>
+                        <div className={styles.submitButtonContainer}>
+                            <input className={styles.submitButton} type='submit' value="Play"></input>
+                        </div>    
+                    </div>
+                </form>
+            </div>
             <Field fieldData={fieldData}/>
-            <MovementButtons 
+            {isPlayClicked && <MovementButtons 
                 moveUp={moveUp}
                 moveLeft={moveLeft}
                 moveRight={moveRight}
                 moveDown={moveDown}
-            />
+            />}
             {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} refreshPage={refreshPage}/>}
-        </div>
+        </>
     )
 }
