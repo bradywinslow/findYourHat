@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Find Your Hat Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Website Link
+[Find Your Hat](https://findyourhat.netlify.app/)
 
-## Available Scripts
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [How to Play](#how-to-play)
+- [License](#license)
+- [Contact](#contact)
 
-In the project directory, you can run:
+## Introduction
+Find Your Hat is a simple and fun game built using React. The goal is to navigate through a field filled with holes and find your hat. Be careful not to fall into any holes or step out of bounds, or you'll lose the game.
 
-### `npm start`
+## Features
+- Objective: Find your hat on the field.
+- Controls: Navigate by clicking the movement buttons (up, down, left, right).
+- Rules: Avoid falling into holes or moving out of bounds.
+- Restart: Play again after winning or losing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Netlify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+To run Find Your Hat locally:
+1. Clone this repository and navigate to the project directory:
 
-### `npm test`
+```
+git clone https://github.com/your/repository.git
+cd find-your-hat
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open `http://localhost:3000` in your browser to play the game.
 
-### `npm run eject`
+## How to Play
+1. Enter desired width and height of playing field and a percentage for the number of holes on the playing field and press 'Play.'
+2. Click the movement buttons to move around the field.
+2. Find your hat without falling into holes or moving out of bounds.
+3. Restart the game if you win or lose.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
+This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
+Feel free to reach out if you have any questions or feedback!
+- LinkedIn: [Brady Winslow](https://www.linkedin.com/in/bradywinslow/)
+- GitHub: [bradywinslow](https://github.com/bradywinslow)
+- Email: [brady.winslow@gmail.com]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to reach out if you have any questions, feedback, or if you're interested in collaborating!
