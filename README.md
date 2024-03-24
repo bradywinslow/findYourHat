@@ -61,9 +61,8 @@ npm start
 This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Contact
-Feel free to reach out if you have any questions or feedback!
 - LinkedIn: [Brady Winslow](https://www.linkedin.com/in/bradywinslow/)
 - GitHub: [bradywinslow](https://github.com/bradywinslow)
-- Email: [brady.winslow@gmail.com]
+- Email: brady.winslow@gmail.com
 
 Feel free to reach out if you have any questions, feedback, or if you're interested in collaborating!
