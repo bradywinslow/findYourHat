@@ -11,6 +11,8 @@
 .startingInstructionsText {
     text-align: center;
     width: 32rem;
+    font-size: 1.25rem;
+    padding: 0 2rem;
 }
 
 form {
@@ -23,7 +25,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .inputField {
@@ -33,16 +35,26 @@ form {
 .width, .height, .percentage {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 label {
-    margin-bottom: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.65rem;
     text-align: center;
+    font-size: 1.15rem;
 }
 
 input {
     text-align: center;
+    border-radius: 5px;
+    height: 2rem;
+    font-size: 1.15rem;
+    border: none;
+}
+
+input:focus {
+    border: #551700;
 }
 
 .submitButtonContainer {
@@ -55,11 +67,12 @@ input {
     color: #EFC8C3;
     padding: 0.5rem;
     font: inherit;
-    line-height: 1;
+    line-height: 1.5rem;
     cursor: pointer;
-    width: 6rem;
-    border-radius: 15px;
+    border-radius: 5px;
+    font-size: 1.15rem;
     border: none;
+    width: 10rem;
 }
 
 .submitButton:hover {

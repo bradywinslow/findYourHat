@@ -17,7 +17,7 @@
     align-items: center;
     background-color: ghostwhite;
     padding: 2rem 2rem 2rem 2rem;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .modalText {
@@ -31,12 +31,13 @@
     justify-content: center;
     padding: 0.5rem;
     font: inherit;
-    line-height: 1;
     cursor: pointer;
-    width: 7rem;
-    border-radius: 15px;
+    width: 10rem;
     border: none;
     background-color: #551700;
     color: #EFC8C3;
     margin-bottom: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
 }
