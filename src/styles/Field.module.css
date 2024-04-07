@@ -6,7 +6,6 @@
 .tableRows {
     display: flex;
     justify-content: center;
-    background-color: ghostwhite;
 }
 
 .tableData {
