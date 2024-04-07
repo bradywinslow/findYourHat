@@ -54,7 +54,7 @@ input {
 }
 
 input:focus {
-    border: #551700;
+    outline: #551700 solid 2px;
 }
 
 .submitButtonContainer {
