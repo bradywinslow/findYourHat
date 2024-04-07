@@ -11,9 +11,9 @@ import player from '../characters/player.png';
 
 
 export default function StaringForm() {
-    const [width, setWidth] = useState(3);
-    const [height, setHeight] = useState(3);
-    const [percentage, setPercentage] = useState(10);
+    const [width, setWidth] = useState();
+    const [height, setHeight] = useState();
+    const [percentage, setPercentage] = useState();
     const [isPlayClicked, setIsPlayClicked] = useState(false);
     const [isFieldNotDisplayed, setIsFieldNotDisplayed] = useState(true);
     const [fieldData, setFieldData] = useState([]);
@@ -114,13 +114,13 @@ export default function StaringForm() {
         <>
             {isFieldNotDisplayed && <div className={styles.startingContainer}>
                 <div className={styles.startingInstructionsContainer}>
-                    <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field and a percentage for the number of holes on the playing field.</p>
+                    <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field and a percentage to determine what percent of the field should be covered in holes.</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.startingForm}>
                         <div>
                             <div className={styles.width}>
-                                <label htmlFor='width'>Width (3-10)</label>
+                                <label htmlFor='width'>Width</label>
                                 <input
                                     className={styles.inputField}
                                     type='number'
@@ -130,11 +130,12 @@ export default function StaringForm() {
                                     min='3'
                                     max='10'
                                     value={width}
+                                    placeholder='3-10'
                                     onChange={handleWidthInput}    
                                 />
                             </div>
                             <div className={styles.height}>
-                                <label htmlFor='height'>Height (3-10)</label>
+                                <label htmlFor='height'>Height</label>
                                 <input
                                     className={styles.inputField}
                                     type='number'
@@ -144,11 +145,12 @@ export default function StaringForm() {
                                     min='3'
                                     max='10'
                                     value={height}
+                                    placeholder='3-10'
                                     onChange={handleHeightInput}
                                 />
                             </div>
                             <div className={styles.percentage}>
-                                <label htmlFor='percentage'>Percentage (10-50)</label>
+                                <label htmlFor='percentage'>Percentage</label>
                                 <input
                                     className={styles.inputField}
                                     type='number'
@@ -159,6 +161,7 @@ export default function StaringForm() {
                                     max='50'
                                     step='1'
                                     value={percentage}
+                                    placeholder='10-50'
                                     onChange={handlePercentageInput}
                                 />
                             </div>

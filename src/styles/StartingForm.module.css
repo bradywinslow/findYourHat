@@ -51,6 +51,7 @@ input {
     height: 2rem;
     font-size: 1.15rem;
     border: none;
+    width: 10rem;
 }
 
 input:focus {
@@ -73,6 +74,10 @@ input:focus {
     font-size: 1.15rem;
     border: none;
     width: 10rem;
+}
+
+.submitButton:focus {
+    outline: none;
 }
 
 .submitButton:hover {
