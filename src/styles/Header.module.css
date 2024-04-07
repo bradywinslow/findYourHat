@@ -14,7 +14,10 @@
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-family: 'Tac One', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .headerHat {
