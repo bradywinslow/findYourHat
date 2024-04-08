@@ -114,7 +114,7 @@ export default function StaringForm() {
         <>
             {isFieldNotDisplayed && <div className={styles.startingContainer}>
                 <div className={styles.startingInstructionsContainer}>
-                    <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field and a percentage to determine what percent of the field should be covered in holes.</p>
+                    <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field. Then, enter in a percentage to determine what percent of the field should be covered in holes (hint: the more holes, the harder the game).</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.startingForm}>
