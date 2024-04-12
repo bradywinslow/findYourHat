@@ -1,13 +1,18 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .movementButtonsDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
     gap: 1rem;
     height: 7rem;
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    bottom: -1rem;
+    width: 95%;
 }
 
 button {

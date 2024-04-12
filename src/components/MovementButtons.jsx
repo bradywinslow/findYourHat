@@ -8,7 +8,7 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown, isGameOver }) {
     return (
-        <>
+        <div className={styles.wrapper}>
             <div className={styles.movementButtonsDiv}>
                 <div className={styles.moveLeftButtonContainer}>
                     <button className={styles.moveLeftButton} type='button' onClick={moveLeft} disabled={isGameOver}>
@@ -32,6 +32,6 @@ export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown,
                     </button>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

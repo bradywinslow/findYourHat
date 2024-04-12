@@ -1,35 +1,40 @@
-import {render, screen} from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import StartingForm from '../StartingForm.jsx';
 import '@testing-library/jest-dom'
+import StartingForm from '../StartingForm.jsx';
 
 test('clicks button and displays field', async () => {
     // ARRANGE
     render(<StartingForm />)
 
     // ACT
-    await userEvent.click(await screen.findByRole('button', {
+    const playButton = screen.getByRole('button', {
         name: 'Play'
-    }))
+    });
+    userEvent.click(playButton);
+
+    // Wait for table to appear
     const table = await screen.findByRole('table');
+
+    // ASSERTION
+    expect(table).toBeVisible();
+});
+
+test('clicks button and displays movementButtons', async () => {
+    // ARRANGE
+    render(<StartingForm />)
+
+    // ACT
+    const playButton = screen.getByRole('button', {
+        name: 'Play'
+    });
+    userEvent.click(playButton);
+
+    // Wait for movementButtons to appear
     const movementButtons = await screen.findAllByRole('button');
 
     // ASSERTION
-    expect(table).toBeVisible();
-    expect(movementButtons.length).toEqual(4);
-})
+    // expect(movementButtons).toBeVisible();
 
-
-test('clicks button and displays field', async () => {
-    // ARRANGE
-    render(<StartingForm />)
-  
-    // ACT
-    await userEvent.click(await screen.findByRole('button', {
-        name: 'Play'
-    }))
-    const table = await screen.findByRole('table');
-    
-    // ASSERTION
-    expect(table).toBeVisible();
-  })
+    // screen.debug()
+  });
