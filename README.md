@@ -26,6 +26,7 @@ Find Your Hat is a simple and fun game built using React. The goal is to navigat
 - CSS3
 - JavaScript
 - React
+- React Router
 - Netlify
 
 ## Getting Started
