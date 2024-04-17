@@ -25,7 +25,35 @@ export default function Game() {
         const generatedFieldData = generateField(data.width, data.height, data.percentage);
         setFieldData(generatedFieldData);
     }, [data.width, data.height, data.percentage]);
-    
+
+    useEffect(() => {
+        function handleKeyDown(e) {
+            switch (e.code) {
+                case 'ArrowLeft':
+                    moveLeft();
+                    break;
+                case 'ArrowUp':
+                    moveUp();
+                    break;
+                case 'ArrowDown':
+                    moveDown();
+                    break;
+                case 'ArrowRight':
+                    moveRight();
+                    break;
+                default:
+                    break;
+            }
+        }
+        // Add event listener for keyboard input
+        document.addEventListener('keydown', handleKeyDown);
+
+        // Cleanup function to remove event listener
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    });
+
     function moveLeft() {
         if (fieldData[y][x] !== hole || fieldData[y][x] !== hat) {
             fieldData[y][x] = pathCharacter;
@@ -34,7 +62,7 @@ export default function Game() {
         setX(newX);
         setFieldData(prevFieldData => updateField(prevFieldData, newX, y));
     }
-    
+
     function moveUp() {
         if (fieldData[y][x] !== hole || fieldData[y][x] !== hat) {
             fieldData[y][x] = pathCharacter;

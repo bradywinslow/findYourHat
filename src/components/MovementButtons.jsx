@@ -6,10 +6,10 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown, isGameOver }) {
+export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown, handleKeyDown, isGameOver }) {
     return (
         <div className={styles.wrapper}>
-            <div className={styles.movementButtonsDiv}>
+            <form className={styles.movementButtonsDiv} onKeyDown={handleKeyDown}>
                 <div className={styles.moveLeftButtonContainer}>
                     <button className={styles.moveLeftButton} type='button' onClick={moveLeft} disabled={isGameOver}>
                         Left<FontAwesomeIcon icon={faArrowLeft} className={styles.faArrowLeft} />
@@ -31,7 +31,7 @@ export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown,
                         Right<FontAwesomeIcon icon={faArrowRight} className={styles.faArrowRight} />
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     )
 }
