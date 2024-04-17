@@ -1,5 +1,6 @@
 .startingContainer {
     color: #383838;
+    margin-bottom: 2.5rem;
 }
 
 .startingInstructionsContainer {
@@ -61,6 +62,7 @@ input:focus {
 .submitButtonContainer {
     display: flex;
     align-items: center;
+    margin-bottom: 2.5rem;
 }
 
 .submitButton {
