@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/GameOverModal.module.css';
 
-export default function GameOverModal({ isGameOver, gameOverMessage, refreshPage }) {
+export default function GameOverModal({ isGameOver, gameOverMessage, restartGame }) {
     if (!isGameOver) return null;
     
     return (
@@ -9,7 +9,7 @@ export default function GameOverModal({ isGameOver, gameOverMessage, refreshPage
             <div className={styles.overlay}>
                 <div className={styles.modal}>
                     <p className={styles.modalText}>{gameOverMessage}</p>
-                    <button onClick={refreshPage} className={styles.modalButton}>Play Again</button>
+                    <button onClick={restartGame} className={styles.modalButton}>Play Again</button>
                 </div>
             </div>
         </>

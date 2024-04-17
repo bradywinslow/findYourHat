@@ -6,32 +6,37 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown, handleKeyDown, isGameOver }) {
+export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown, isGameOver }) {
     return (
         <div className={styles.wrapper}>
-            <form className={styles.movementButtonsDiv} onKeyDown={handleKeyDown}>
-                <div className={styles.moveLeftButtonContainer}>
-                    <button className={styles.moveLeftButton} type='button' onClick={moveLeft} disabled={isGameOver}>
-                        Left<FontAwesomeIcon icon={faArrowLeft} className={styles.faArrowLeft} />
-                    </button>
+            <div className={styles.footer}>
+                <div className={styles.movementButtonsDiv}>
+                    <div className={styles.moveLeftButtonContainer}>
+                        <button className={styles.moveLeftButton} type='button' onClick={moveLeft} disabled={isGameOver}>
+                            Left<FontAwesomeIcon icon={faArrowLeft} className={styles.faArrowLeft} />
+                        </button>
+                    </div>
+                    <div className={styles.moveUpButtonContainer}>
+                        <button className={styles.moveUpButton} type='button' onClick={moveUp} disabled={isGameOver}>
+                            Up<FontAwesomeIcon icon={faArrowUp} className={styles.faArrowUp} />
+                        </button>
+                    </div>
+                    <div className={styles.moveDownButtonContainer}>
+                        <button className={styles.moveDownButton} type='button' onClick={moveDown} disabled={isGameOver}>
+                            Down<FontAwesomeIcon icon={faArrowDown} className={styles.faArrowDown} />
+                        </button>
+                    </div>
+                    <div className={styles.moveRightButtonContainer}>
+                        <button className={styles.moveRightButton} type='button' onClick={moveRight} disabled={isGameOver}>
+                            Right<FontAwesomeIcon icon={faArrowRight} className={styles.faArrowRight} />
+                        </button>
+                    </div>
                 </div>
-                
-                <div className={styles.moveUpButtonContainer}>
-                    <button className={styles.moveUpButton} type='button' onClick={moveUp} disabled={isGameOver}>
-                        Up<FontAwesomeIcon icon={faArrowUp} className={styles.faArrowUp} />
-                    </button>
+                <div>
+                    <p>*Use the buttons above or the keyboard arrows to find your hat*</p>
                 </div>
-                <div className={styles.moveDownButtonContainer}>
-                    <button className={styles.moveDownButton} type='button' onClick={moveDown} disabled={isGameOver}>
-                        Down<FontAwesomeIcon icon={faArrowDown} className={styles.faArrowDown} />
-                    </button>
-                </div>
-                <div className={styles.moveRightButtonContainer}>
-                    <button className={styles.moveRightButton} type='button' onClick={moveRight} disabled={isGameOver}>
-                        Right<FontAwesomeIcon icon={faArrowRight} className={styles.faArrowRight} />
-                    </button>
-                </div>
-            </form>
+            </div>
+
         </div>
     )
 }

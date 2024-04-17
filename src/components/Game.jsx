@@ -118,7 +118,7 @@ export default function Game() {
         }
     }
 
-    function refreshPage() {
+    function restartGame() {
         navigate('/');
     }
     
@@ -131,7 +131,7 @@ export default function Game() {
                 moveDown={moveDown}
                 moveRight={moveRight}
             />
-            {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} refreshPage={refreshPage}/>}
+            {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} restartGame={restartGame}/>}
         </>
     )
 }
