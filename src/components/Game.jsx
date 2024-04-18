@@ -28,21 +28,23 @@ export default function Game() {
 
     useEffect(() => {
         function handleKeyDown(e) {
-            switch (e.code) {
-                case 'ArrowLeft':
-                    moveLeft();
-                    break;
-                case 'ArrowUp':
-                    moveUp();
-                    break;
-                case 'ArrowDown':
-                    moveDown();
-                    break;
-                case 'ArrowRight':
-                    moveRight();
-                    break;
-                default:
-                    break;
+            if (!isGameOver) {
+                switch (e.code) {
+                    case 'ArrowLeft':
+                        moveLeft();
+                        break;
+                    case 'ArrowUp':
+                        moveUp();
+                        break;
+                    case 'ArrowDown':
+                        moveDown();
+                        break;
+                    case 'ArrowRight':
+                        moveRight();
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         // Add event listener for keyboard input
@@ -52,6 +54,12 @@ export default function Game() {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
+    });
+
+    useEffect(() => {
+        if (isGameOver) {
+            document.body.style.overflow= 'hidden';
+        }
     });
 
     function moveLeft() {
@@ -120,6 +128,7 @@ export default function Game() {
 
     function restartGame() {
         navigate('/');
+        window.location.reload();
     }
     
     return (
