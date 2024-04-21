@@ -29,6 +29,9 @@ Find Your Hat is a simple and fun game built using React. The goal is to navigat
 - React Router
 - Netlify
 
+## Deploy Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9130d3c0-1592-45b0-98cf-d606c7cc17ac/deploy-status)](https://app.netlify.com/sites/findyourhat/deploys)
+
 ## Getting Started
 To run Find Your Hat locally:
 1. Clone this repository and navigate to the project directory:
@@ -53,10 +56,10 @@ npm start
 4. Open `http://localhost:3000` in your browser to play the game.
 
 ## How to Play
-1. Enter desired width and height of playing field and a percentage for the number of holes on the playing field and press 'Play.'
-2. Click the movement buttons to move around the field.
+1. Enter desired width and height of playing field and a percentage to determine what percent of the field should be covered in holes. Then, press 'Play.'
+2. Click the movement buttons or press the keyboard arrows to move around the field.
 2. Find your hat without falling into holes or moving out of bounds.
-3. Restart the game if you win or lose.
+3. Restart the game by clicking the 'Play Again' button after you win or lose.
 
 ## License
 This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
