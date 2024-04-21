@@ -130,7 +130,7 @@ export default function Game() {
         navigate('/');
         window.location.reload();
     }
-    
+
     return (
         <>
             <Field fieldData={fieldData}/>
