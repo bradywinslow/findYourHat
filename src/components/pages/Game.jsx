@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Field from './Field.jsx';
-import MovementButtons from './MovementButtons.jsx';
-import GameOverModal from './GameOverModal.jsx';
-import hat from '../characters/hat.png';
-import hole from '../characters/hole.png';
-import pathCharacter from '../characters/pathCharacter.png';
-import player from '../characters/player.png';
-import { generateField } from '../generateFieldLogic/generateField.js';
+import Field from '../Field.jsx';
+import MovementButtons from '../MovementButtons.jsx';
+import GameOverModal from '../GameOverModal.jsx';
+import hat from '../../characters/hat.png';
+import hole from '../../characters/hole.png';
+import pathCharacter from '../../characters/pathCharacter.png';
+import player from '../../characters/player.png';
+import { generateField } from '../../generateFieldLogic/generateField.js';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Game() {

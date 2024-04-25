@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFaceFrown } from '@fortawesome/free-regular-svg-icons';
-import styles from '../styles/NotFound.module.css';
+import styles from '../../styles/NotFound.module.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function NotFound() {
