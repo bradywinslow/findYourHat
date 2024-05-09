@@ -1,4 +1,4 @@
-# Find Your Hat Game
+# Find Your Hat
 
 ## Website Link
 [Find Your Hat](https://findyourhat.netlify.app/)
@@ -7,6 +7,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Deploy Status](#deploy-status)
 - [Getting Started](#getting-started)
 - [How to Play](#how-to-play)
 - [License](#license)
@@ -17,7 +18,7 @@ Find Your Hat is a simple and fun game built using React. The goal is to navigat
 
 ## Features
 - Objective: Find your hat on the field.
-- Controls: Navigate by clicking the movement buttons (up, down, left, right).
+- Controls: Navigate by clicking the movement buttons (up, down, left, right) or using the arrow keys on the keyboard.
 - Rules: Avoid falling into holes or moving out of bounds.
 - Restart: Play again after winning or losing.
 
@@ -58,7 +59,7 @@ npm start
 ## How to Play
 1. Enter desired width and height of playing field and a percentage to determine what percent of the field should be covered in holes. Then, press 'Play.'
 2. Click the movement buttons or press the keyboard arrows to move around the field.
-2. Find your hat without falling into holes or moving out of bounds.
+2. Find your hat while trying to avoid falling into a hole or moving out of bounds.
 3. Restart the game by clicking the 'Play Again' button after you win or lose.
 
 ## License
