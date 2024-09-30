@@ -99,3 +99,21 @@ input::-webkit-inner-spin-button {
 input[type=number]{
     -moz-appearance: textfield;
 }
+
+@media only screen and (max-width: 770px) {
+    .startingInstructionsText {
+        font-size: 1.15rem;
+    }
+    label {
+        font-size: 1.10rem;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .startingInstructionsText {
+        font-size: 1.05rem;
+    }
+    label {
+        font-size: 1.05rem;
+    }
+}

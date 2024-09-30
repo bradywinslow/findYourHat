@@ -29,5 +29,29 @@
     display: flex;
     text-align: center;
     font-size: 1.5rem;
-    margin: -2rem 2rem 1rem 2rem;
+    margin: -2rem 2rem 0rem 2rem;
+}
+
+@media only screen and (max-width: 770px) {
+    .title {
+        font-size: 3.5rem;
+    }
+    .headerHat {
+        height: 2.75rem;
+    }
+    .gameInstructions {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .title {
+        font-size: 3rem;
+    }
+    .headerHat {
+        font-size: 2.5rem;
+    }
+    .gameInstructions {
+        font-size: 1.15rem;
+    }
 }
