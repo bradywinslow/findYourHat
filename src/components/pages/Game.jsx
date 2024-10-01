@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Field from '../Field.jsx';
 import MovementButtons from '../MovementButtons.jsx';
+import MobileMovementButtons from '../MobileMovementButtons.jsx';
 import GameOverModal from '../GameOverModal.jsx';
 import hat from '../../characters/hat.png';
 import hole from '../../characters/hole.png';
@@ -134,12 +135,18 @@ export default function Game() {
     return (
         <>
             <Field fieldData={fieldData}/>
-            <MovementButtons 
-                moveLeft={moveLeft}
-                moveUp={moveUp}
-                moveDown={moveDown}
-                moveRight={moveRight}
-            />
+                <MobileMovementButtons 
+                    moveLeft={moveLeft}
+                    moveUp={moveUp}
+                    moveDown={moveDown}
+                    moveRight={moveRight}
+                />
+                <MovementButtons 
+                    moveLeft={moveLeft}
+                    moveUp={moveUp}
+                    moveDown={moveDown}
+                    moveRight={moveRight}
+                />
             {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} restartGame={restartGame}/>}
         </>
     )

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .footer {
@@ -9,13 +10,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 9rem;
+    height: 12rem;
     position: absolute;
     bottom: -1rem;
     width: 100%;
 }
 
 .movementButtonsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.moveSidewaysButtonsContainer {
     display: flex;
     gap: 0.5rem;
 }
@@ -45,7 +54,7 @@ button:active {
     background-color: transparent;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (min-width: 550px) {
     .wrapper {
         display: none;
     }
