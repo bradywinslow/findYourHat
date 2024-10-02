@@ -18,6 +18,8 @@
     background-color: ghostwhite;
     padding: 2rem 2rem 2rem 2rem;
     border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .modalText {

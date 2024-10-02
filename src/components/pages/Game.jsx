@@ -135,18 +135,18 @@ export default function Game() {
     return (
         <>
             <Field fieldData={fieldData}/>
-                <MobileMovementButtons 
-                    moveLeft={moveLeft}
-                    moveUp={moveUp}
-                    moveDown={moveDown}
-                    moveRight={moveRight}
-                />
-                <MovementButtons 
-                    moveLeft={moveLeft}
-                    moveUp={moveUp}
-                    moveDown={moveDown}
-                    moveRight={moveRight}
-                />
+            <MobileMovementButtons 
+                moveLeft={moveLeft}
+                moveUp={moveUp}
+                moveDown={moveDown}
+                moveRight={moveRight}
+            />
+            <MovementButtons 
+                moveLeft={moveLeft}
+                moveUp={moveUp}
+                moveDown={moveDown}
+                moveRight={moveRight}
+            />
             {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} restartGame={restartGame}/>}
         </>
     )
