@@ -1,11 +1,14 @@
 .fieldContainer {
     display: flex;
-    border: solid 4px #551700;
-    background-color: ghostwhite;
+    border: solid 6px #551700;
     border-radius: 5px;
     width: fit-content;
     height: fit-content;
     margin: auto;
+}
+
+.field {
+    border-spacing: 0;
 }
 
 .tableRows {
@@ -17,6 +20,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ghostwhite;
     padding: 0;
 }
