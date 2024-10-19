@@ -16,37 +16,25 @@
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Tac One', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .headerHat {
-    height: 3rem;
+    height: 2.5rem;
     color: #67221B;
 }
 
 .gameInstructions {
     display: flex;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     margin: -2rem 2rem 0rem 2rem;
 }
 
-@media only screen and (max-width: 770px) {
-    .title {
-        font-size: 3.5rem;
-    }
-    .headerHat {
-        height: 2.75rem;
-    }
-    .gameInstructions {
-        font-size: 1.25rem;
-    }
-}
-
-@media only screen and (max-width: 415px) {
+@media only screen and (min-width: 416px) {
     .headerContainer {
         display: none;
     }
