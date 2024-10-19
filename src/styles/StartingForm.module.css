@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     color: #383838;
-    margin: auto;
+    margin: 0 auto;
     max-width: 750px;
     gap: 2rem;
 }
@@ -23,15 +23,11 @@
 
 form {
     display: flex;
-    justify-content: center;
-}
-
-.startingForm {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    margin: 0 1.5rem;
 }
 
 .inputFields {
@@ -45,17 +41,16 @@ form {
 
 .inputField {
     background-color: ghostwhite;
+    box-sizing: border-box;
 }
 
 .width, .height, .percentage {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    margin: 0 1rem;
 }
 
 label {
-    margin-top: 0.5rem;
-    margin-bottom: 0.65rem;
     text-align: center;
     font-size: 1.15rem;
 }
@@ -67,20 +62,20 @@ input {
     font-size: 1rem;
     border: none;
     width: 10rem;
+    padding: 2px;
+    margin: 10px auto;
 }
 
 input:focus {
     outline: #551700 solid 2px;
 }
 
-.submitButtonContainer {
-    display: flex;
-    align-items: center;
-    margin-top: 0.75rem;
-    margin-bottom: 3rem;
-}
-
 .submitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.75rem auto 3rem auto;
+    width: 10rem;
     background-color: #551700;
     color: #EFC8C3;
     padding: 0.5rem;
@@ -90,7 +85,6 @@ input:focus {
     border-radius: 5px;
     font-size: 1.15rem;
     border: none;
-    width: 10rem;
 }
 
 .submitButton:focus {
@@ -124,15 +118,30 @@ input[type=number]{
     }
 }
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 512px) {
     .startingContainer {
         gap: 1.5rem;
     }
-    
     .startingInstructionsText {
         font-size: 1.05rem;
     }
+    form {
+        gap: 1rem;
+    }
+    .inputFields {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+    }
     label {
         font-size: 1.05rem;
+    }
+    .width, .height, .percentage {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .submitButton {
+        width: 100%;
     }
 }

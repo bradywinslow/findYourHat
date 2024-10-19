@@ -33,59 +33,55 @@ export default function StaringForm() {
                     <p className={styles.startingInstructionsText}>To begin the game, enter in the desired width and height of the playing field. Then, enter in a percentage to determine what percent of the field should be covered in holes (hint: the more holes, the harder the game).</p>
                 </div>
                 <form onSubmit={handleSubmit}>
-                    <div className={styles.startingForm}>
-                        <div className={styles.inputFields}>
-                            <div className={styles.width}>
-                                <label htmlFor='width'>Width</label>
-                                <input
-                                    className={styles.inputField}
-                                    type='number'
-                                    name='width'
-                                    id='width'
-                                    required
-                                    min='3'
-                                    max='10'
-                                    value={width}
-                                    placeholder='3-10'
-                                    onChange={handleWidthInput}    
-                                />
-                            </div>
-                            <div className={styles.height}>
-                                <label htmlFor='height'>Height</label>
-                                <input
-                                    className={styles.inputField}
-                                    type='number'
-                                    name='height'
-                                    id='height'
-                                    required
-                                    min='3'
-                                    max='10'
-                                    value={height}
-                                    placeholder='3-10'
-                                    onChange={handleHeightInput}
-                                />
-                            </div>
-                            <div className={styles.percentage}>
-                                <label htmlFor='percentage'>Percentage</label>
-                                <input
-                                    className={styles.inputField}
-                                    type='number'
-                                    name='percentage'
-                                    id='percentage'
-                                    required
-                                    min='10'
-                                    max='50'
-                                    step='1'
-                                    value={percentage}
-                                    placeholder='10-50'
-                                    onChange={handlePercentageInput}
-                                />
-                            </div>
+                    <div className={styles.inputFields}>
+                        <div className={styles.width}>
+                            <label htmlFor='width'>Width</label>
+                            <input
+                                className={styles.inputField}
+                                type='number'
+                                name='width'
+                                id='width'
+                                required
+                                min='3'
+                                max='10'
+                                value={width}
+                                placeholder='3-10'
+                                onChange={handleWidthInput}    
+                            />
                         </div>
-                        <div className={styles.submitButtonContainer}>
-                            <button className={styles.submitButton}>Play</button>
-                        </div>    
+                        <div className={styles.height}>
+                            <label htmlFor='height'>Height</label>
+                            <input
+                                className={styles.inputField}
+                                type='number'
+                                name='height'
+                                id='height'
+                                required
+                                min='3'
+                                max='10'
+                                value={height}
+                                placeholder='3-10'
+                                onChange={handleHeightInput}
+                            />
+                        </div>
+                        <div className={styles.percentage}>
+                            <label htmlFor='percentage'>Percentage</label>
+                            <input
+                                className={styles.inputField}
+                                type='number'
+                                name='percentage'
+                                id='percentage'
+                                required
+                                min='10'
+                                max='50'
+                                step='1'
+                                value={percentage}
+                                placeholder='10-50'
+                                onChange={handlePercentageInput}
+                            />
+                        </div>
                     </div>
+                    <button className={styles.submitButton}>Play</button>
                 </form>
             </div>
         </>
