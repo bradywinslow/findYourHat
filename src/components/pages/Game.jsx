@@ -9,6 +9,7 @@ import pathCharacter from '../../characters/pathCharacter.png';
 import player from '../../characters/player.png';
 import { generateField } from '../../generateFieldLogic/generateField.js';
 import { useLocation, useNavigate } from 'react-router-dom';
+import styles from '../../styles/Game.module.css';
 
 export default function Game() {
     const [fieldData, setFieldData] = useState([]);
@@ -133,21 +134,25 @@ export default function Game() {
     }
 
     return (
-        <>
-            <Field fieldData={fieldData}/>
-            <MobileMovementButtons 
-                moveLeft={moveLeft}
-                moveUp={moveUp}
-                moveDown={moveDown}
-                moveRight={moveRight}
-            />
-            <MovementButtons 
-                moveLeft={moveLeft}
-                moveUp={moveUp}
-                moveDown={moveDown}
-                moveRight={moveRight}
-            />
+        <div className={styles.gameContainer}>
+            <div className={styles.fieldContainer}>
+                <Field fieldData={fieldData}/>
+            </div>
+            <div className={styles.movementButtonsContainer}>
+                <MobileMovementButtons 
+                    moveLeft={moveLeft}
+                    moveUp={moveUp}
+                    moveDown={moveDown}
+                    moveRight={moveRight}
+                />
+                <MovementButtons 
+                    moveLeft={moveLeft}
+                    moveUp={moveUp}
+                    moveDown={moveDown}
+                    moveRight={moveRight}
+                />
+            </div>
             {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} restartGame={restartGame}/>}
-        </>
+        </div>
     )
 }

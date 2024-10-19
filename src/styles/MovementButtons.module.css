@@ -1,7 +1,9 @@
 .wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .footer {
@@ -10,9 +12,8 @@
     justify-content: center;
     align-items: center;
     height: 9rem;
-    position: absolute;
-    bottom: -1rem;
-    width: 100%;
+    position: relative;
+    width: fit-content;
 }
 
 .movementButtonsDiv {
