@@ -34,7 +34,7 @@ export default function StaringForm() {
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.startingForm}>
-                        <div>
+                        <div className={styles.inputFields}>
                             <div className={styles.width}>
                                 <label htmlFor='width'>Width</label>
                                 <input

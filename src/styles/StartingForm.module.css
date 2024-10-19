@@ -1,6 +1,11 @@
 .startingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #383838;
-    margin-bottom: 2.5rem;
+    margin: auto;
+    max-width: 750px;
+    gap: 2rem;
 }
 
 .startingInstructionsContainer {
@@ -11,9 +16,9 @@
 
 .startingInstructionsText {
     text-align: center;
-    width: 35rem;
+    max-width: 750px;
+    margin: 0 2rem;
     font-size: 1.25rem;
-    padding: 0 2rem;
 }
 
 form {
@@ -29,6 +34,15 @@ form {
     gap: 1.5rem;
 }
 
+.inputFields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 750px;
+    margin: 0 2rem;
+}
+
 .inputField {
     background-color: ghostwhite;
 }
@@ -36,7 +50,7 @@ form {
 .width, .height, .percentage {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.75rem;
+    padding: 0 1rem;
 }
 
 label {
@@ -62,7 +76,8 @@ input:focus {
 .submitButtonContainer {
     display: flex;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
 }
 
 .submitButton {
@@ -110,6 +125,10 @@ input[type=number]{
 }
 
 @media only screen and (max-width: 481px) {
+    .startingContainer {
+        gap: 1.5rem;
+    }
+    
     .startingInstructionsText {
         font-size: 1.05rem;
     }
