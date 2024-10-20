@@ -11,7 +11,7 @@ export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown,
         <div className={styles.wrapper}>
             <div className={styles.footer}>
                 <div className={styles.instructionText}>
-                    <p>*Use these buttons or the arrow keys on the keyboard to find your hat*</p>
+                    <p>*Use the buttons or keyboard arrow keys to move across the field*</p>
                 </div>
                 <div className={styles.movementButtonsDiv}>
                     <div className={styles.moveLeftButtonContainer}>

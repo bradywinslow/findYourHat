@@ -11,7 +11,7 @@ export default function Header() {
                 <FontAwesomeIcon icon={faHatWizard} className={styles.headerHat}/>
             </div>
             <div className={styles.gameInstructions}>
-                <p className={styles.instructionsText}>Navigate the field while avoiding the holes to find your hat!</p>
+                <p className={styles.instructionsText}>Navigate the field while avoiding the holes to locate the hat!</p>
             </div>
         </div>
     )
