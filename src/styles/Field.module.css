@@ -2,8 +2,10 @@
     display: flex;
     border: solid 5px #551700;
     border-radius: 5px;
-    width: 750px;
-    height: 750px;
+    max-width: 750px;
+    min-width: 225px;
+    max-height: 500px;
+    min-height: 225px;
     margin: 2rem;
     overflow: scroll;
 }

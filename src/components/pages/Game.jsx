@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Field from '../Field.jsx';
 import MovementButtons from '../MovementButtons.jsx';
 import MobileMovementButtons from '../MobileMovementButtons.jsx';
@@ -17,6 +17,7 @@ export default function Game() {
     const [y, setY] = useState(0);
     const [isGameOver, setIsGameOver] = useState(false);
     const [gameOverMessage, setGameOverMessage] = useState('');
+    const playerPosition = useRef(null);
     
     const location = useLocation();
     const data = location.state || { width: 0, height: 0, percentage: 0 };
@@ -128,6 +129,17 @@ export default function Game() {
         }
     }
 
+    useEffect(() => {
+        // Focus on the player as it moves across the field
+        if (playerPosition.current) {
+            playerPosition.current.scrollIntoView({
+                behavior: 'smooth', // smooth scrolling
+                block: 'center', // vertical center
+                inline: 'center' // horizontal center
+            });
+        }
+    }, [fieldData]);
+
     function restartGame() {
         navigate('/');
         window.location.reload();
@@ -136,7 +148,12 @@ export default function Game() {
     return (
         <div className={styles.gameContainer}>
             <div className={styles.fieldContainer}>
-                <Field fieldData={fieldData}/>
+                <Field
+                    fieldData={fieldData}
+                    x={x}
+                    y={y}
+                    playerPosition={playerPosition}
+                />
             </div>
             <div className={styles.movementButtonsContainer}>
                 <MobileMovementButtons 
