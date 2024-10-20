@@ -10,6 +10,9 @@ export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown,
     return (
         <div className={styles.wrapper}>
             <div className={styles.footer}>
+                <div className={styles.instructionText}>
+                    <p>*Use these buttons or the arrow keys on the keyboard to find your hat*</p>
+                </div>
                 <div className={styles.movementButtonsDiv}>
                     <div className={styles.moveLeftButtonContainer}>
                         <button className={styles.moveLeftButton} type='button' onClick={moveLeft} disabled={isGameOver}>
@@ -32,11 +35,7 @@ export default function MovementButtons({ moveUp, moveLeft, moveRight, moveDown,
                         </button>
                     </div>
                 </div>
-                <div>
-                    <p>*Use the buttons above or the keyboard arrows to find your hat*</p>
-                </div>
             </div>
-
         </div>
     )
 }

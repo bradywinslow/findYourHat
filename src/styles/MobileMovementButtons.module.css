@@ -5,21 +5,10 @@
     overflow: auto;
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 12rem;
-    position: absolute;
-    bottom: -1rem;
-    width: 100%;
-}
-
 .movementButtonsDiv {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 0.45rem;
     justify-content: center;
     align-items: center;
 }
@@ -29,16 +18,16 @@
     gap: 0.5rem;
 }
 
-button {
-    padding: 0.5rem;
+.moveLeftButton, .moveUpButton, .moveDownButton, .moveRightButton {
+    padding: 0.4rem;
     font: inherit;
-    width: 6rem;
+    width: 2.5rem;
     border: none;
     background-color: #551700;
     color: #EFC8C3;
     border-radius: 5px;
-    font-size: 1.15rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
 
 button:hover {
@@ -50,7 +39,6 @@ button:active {
 }
 
 .faArrowUp, .faArrowLeft, .faArrowRight, .faArrowDown {
-    margin-left: 0.85rem;
     background-color: transparent;
 }
 

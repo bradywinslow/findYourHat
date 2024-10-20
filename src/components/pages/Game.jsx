@@ -147,26 +147,26 @@ export default function Game() {
 
     return (
         <div className={styles.gameContainer}>
-            <div className={styles.fieldContainer}>
-                <Field
-                    fieldData={fieldData}
-                    x={x}
-                    y={y}
-                    playerPosition={playerPosition}
-                />
-            </div>
             <div className={styles.movementButtonsContainer}>
+                <MovementButtons 
+                    moveLeft={moveLeft}
+                    moveUp={moveUp}
+                    moveDown={moveDown}
+                    moveRight={moveRight}
+                />
                 <MobileMovementButtons 
                     moveLeft={moveLeft}
                     moveUp={moveUp}
                     moveDown={moveDown}
                     moveRight={moveRight}
                 />
-                <MovementButtons 
-                    moveLeft={moveLeft}
-                    moveUp={moveUp}
-                    moveDown={moveDown}
-                    moveRight={moveRight}
+            </div>
+            <div className={styles.fieldContainer}>
+                <Field
+                    fieldData={fieldData}
+                    x={x}
+                    y={y}
+                    playerPosition={playerPosition}
                 />
             </div>
             {isGameOver && <GameOverModal isGameOver={isGameOver} gameOverMessage={gameOverMessage} restartGame={restartGame}/>}
