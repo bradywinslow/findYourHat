@@ -42,7 +42,7 @@ button:active {
     background-color: transparent;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 551px) {
     .wrapper {
         display: none;
     }
