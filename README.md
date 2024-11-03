@@ -15,6 +15,8 @@
 
 ## Introduction
 Find Your Hat is a simple and fun game built using React. The goal is to navigate through a field filled with holes and find your hat. Be careful not to fall into any holes or step out of bounds, or you'll lose the game.
+- Video demo:  
+[![Video demo](https://img.youtube.com/vi/YCnOO_iZ2fw/0.jpg)](https://www.youtube.com/watch?v=YCnOO_iZ2fw)
 
 ## Features
 - Objective: Find your hat on the field.
