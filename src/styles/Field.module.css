@@ -7,7 +7,7 @@
     max-height: 765px;
     min-height: 225px;
     margin: 0 1.5rem 1.5rem 1.5rem;
-    overflow: auto;
+    overflow-x: none;
 }
 
 .field {
