@@ -5,11 +5,13 @@
 html {
   overflow: hidden;
   height: 100%;
+  overscroll-behavior: none;
 }
 
 body {
   overflow: auto;
   height: 100%;
+  overscroll-behavior: none;
 }
 
 button {
