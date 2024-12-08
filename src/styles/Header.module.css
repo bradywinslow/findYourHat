@@ -26,6 +26,7 @@
 .headerHat {
     height: 3rem;
     color: #67221B;
+    cursor: pointer;
 }
 
 .gameInstructions {
