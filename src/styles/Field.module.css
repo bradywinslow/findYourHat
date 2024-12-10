@@ -12,6 +12,7 @@
 
 .field {
     border-spacing: 0;
+    overscroll-behavior: none;
 }
 
 .tableRows {
